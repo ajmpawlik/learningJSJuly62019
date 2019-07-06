@@ -106,3 +106,17 @@ if ('radius' in circle)
 
 
 //introducing complexity
+
+function Cir(radius) {
+  this.radius = radius
+  let defaultLocation = {x: 0};
+  var defaultLocation1 = {y: 0};
+  this.getDefaultLocation = function() {
+    console.log(defaultLocation)
+  };
+}
+
+const cir = new Cir;
+cir.getDefaultLocation();
+//console.log(defaultLocation);- can't print this as defaultLocation is only in the scope of function and not beyond, bcs of let
+//console.log(defaultLocation1); - tak samo z var
